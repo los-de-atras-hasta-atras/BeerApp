@@ -13,6 +13,10 @@
 		9B9C7AEF217B8A91006BE18F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B9C7AEE217B8A91006BE18F /* Assets.xcassets */; };
 		9B9C7AF2217B8A91006BE18F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B9C7AF0217B8A91006BE18F /* LaunchScreen.storyboard */; };
 		9B9C7AFD217B8A91006BE18F /* BeerAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9C7AFC217B8A91006BE18F /* BeerAppTests.swift */; };
+		B9C8F5852183A22E0042AD1A /* UIView+CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C8F5842183A22E0042AD1A /* UIView+CustomView.swift */; };
+		B9C8F5882183A39F0042AD1A /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C8F5872183A39F0042AD1A /* BorderView.swift */; };
+		B9C8F58A2183BB060042AD1A /* RoundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C8F5892183BB060042AD1A /* RoundImage.swift */; };
+		B9C8F58C2183BF8F0042AD1A /* SearchTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C8F58B2183BF8F0042AD1A /* SearchTextfield.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		9B9C7AF8217B8A91006BE18F /* BeerAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeerAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B9C7AFC217B8A91006BE18F /* BeerAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerAppTests.swift; sourceTree = "<group>"; };
 		9B9C7AFE217B8A91006BE18F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9C8F5842183A22E0042AD1A /* UIView+CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CustomView.swift"; sourceTree = "<group>"; };
+		B9C8F5872183A39F0042AD1A /* BorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
+		B9C8F5892183BB060042AD1A /* RoundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImage.swift; sourceTree = "<group>"; };
+		B9C8F58B2183BF8F0042AD1A /* SearchTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextfield.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +93,9 @@
 		9B9C7AE6217B8A90006BE18F /* BeerApp */ = {
 			isa = PBXGroup;
 			children = (
+				B9C8F5862183A3840042AD1A /* Views */,
+				B9C8F5832183A1C60042AD1A /* Extensions */,
+				B9C8F5822183A0940042AD1A /* Storyboard */,
 				9B06C2A1217B8D0800CB9AE7 /* Controllers  */,
 				9B9C7AE7217B8A90006BE18F /* AppDelegate.swift */,
 				9B9C7AEB217B8A90006BE18F /* Main.storyboard */,
@@ -102,6 +113,31 @@
 				9B9C7AFE217B8A91006BE18F /* Info.plist */,
 			);
 			path = BeerAppTests;
+			sourceTree = "<group>";
+		};
+		B9C8F5822183A0940042AD1A /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		B9C8F5832183A1C60042AD1A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B9C8F5842183A22E0042AD1A /* UIView+CustomView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B9C8F5862183A3840042AD1A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B9C8F5872183A39F0042AD1A /* BorderView.swift */,
+				B9C8F5892183BB060042AD1A /* RoundImage.swift */,
+				B9C8F58B2183BF8F0042AD1A /* SearchTextfield.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,8 +241,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9C8F58A2183BB060042AD1A /* RoundImage.swift in Sources */,
+				B9C8F5882183A39F0042AD1A /* BorderView.swift in Sources */,
 				9B9C7AE8217B8A90006BE18F /* AppDelegate.swift in Sources */,
 				9B06C2A0217B8D0300CB9AE7 /* SelectionPerfilViewController.swift in Sources */,
+				B9C8F5852183A22E0042AD1A /* UIView+CustomView.swift in Sources */,
+				B9C8F58C2183BF8F0042AD1A /* SearchTextfield.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
