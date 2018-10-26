@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+class OpenTabService {
+    static let shared = OpenTabService()
+    let client = RESTClient(baseURLComponents: URLComponents(string: "https://worldb.herokuapp.com/api/v1")!)
+
+}
