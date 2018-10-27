@@ -1,16 +1,20 @@
 PODS:
   - IQKeyboardManagerSwift (6.1.1)
+  - Stripe (13.2.0)
 
 DEPENDENCIES:
   - IQKeyboardManagerSwift
+  - Stripe
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - IQKeyboardManagerSwift
+    - Stripe
 
 SPEC CHECKSUMS:
   IQKeyboardManagerSwift: 977affaeb4d6e971975c7790a6850f31d38f1207
+  Stripe: 2c69e216061d54d9c538204bb4f58bd597ddfc5b
 
-PODFILE CHECKSUM: e90a4429eaf9adf9b34be5b6c7e1a46b966dba93
+PODFILE CHECKSUM: 5164d07b8523c2923f328c4dffcc4e10506f4b7a
 
 COCOAPODS: 1.5.3

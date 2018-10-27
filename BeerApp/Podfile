@@ -8,6 +8,7 @@ target 'BeerApp' do
   # Pods for BeerApp
   
   pod 'IQKeyboardManagerSwift'
+  pod 'Stripe'
 
   target 'BeerAppTests' do
     inherit! :search_paths
