@@ -375,7 +375,11 @@
                         <viewLayoutGuide key="safeArea" id="VB3-HX-YuC"/>
                     </view>
                     <navigationItem key="navigationItem" title="Orden" id="Cyo-cQ-6Oc">
-                        <barButtonItem key="rightBarButtonItem" title="Hacer Pedido" id="YNn-WR-hLC"/>
+                        <barButtonItem key="rightBarButtonItem" title="Hacer Pedido" id="YNn-WR-hLC">
+                            <connections>
+                                <action selector="payOrder:" destination="dbc-4m-IfP" id="wJJ-Pi-N66"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="orderTable" destination="9ia-jt-hWd" id="3Tf-ml-tme"/>
