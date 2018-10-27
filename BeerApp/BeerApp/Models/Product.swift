@@ -212,16 +212,16 @@ struct Srm: Codable {
 
 struct Style: Codable {
     let id: Int
-    let name: StyleName
+    let name: String
     let fgMax, fgMin, ogMin, abvMax: String
     let abvMin, ibuMax, ibuMin, srmMax: String
     let srmMin: String
     let category: Glass
-    let shortName: ShortName
+    let shortName: String
     let categoryID: Int
-    let createDate: CreateDate
+    let createDate: String
     let description: String
-    let updateDate: UpdateDate
+    let updateDate: String
     
     enum CodingKeys: String, CodingKey {
         case id, name
