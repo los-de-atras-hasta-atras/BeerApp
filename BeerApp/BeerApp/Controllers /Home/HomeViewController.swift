@@ -14,16 +14,25 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var searchField:UITextField!
     
     var arrayBeers:[String] = ["Prueba 1","Prueba 1","Prueba 1","Prueba 1"]
+    var arrayFiltered:[String] = []
+    var isfilterring = false
     
+    let searchController = UISearchController(searchResultsController: nil)
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationItem.largeTitleDisplayMode = .never
+        self.title = "Products"
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.delegate = self
+        self.definesPresentationContext = true
+        navigationItem.titleView = searchController.searchBar
         // Do any additional setup after loading the view.
+        searchController.hidesNavigationBarDuringPresentation = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.isNavigationBarHidden = true
     }
     
 
@@ -36,16 +45,13 @@ class HomeViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
-    @IBAction func serachBeer(_ sender:UITextField){
-        print("Buscando", sender.text)
-    }
+
 
 }
 
 extension HomeViewController:UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return arrayBeers.count
+        return self.isfilterring ? self.arrayFiltered.count : arrayBeers.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -60,8 +66,23 @@ extension HomeViewController:UICollectionViewDelegate, UICollectionViewDataSourc
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "detail_segue", sender: nil)
     }
+}
+
+extension HomeViewController: UISearchResultsUpdating, UISearchBarDelegate {
+    func updateSearchResults(for searchController: UISearchController) {
+        if let text = searchController.searchBar.text, !text.isEmpty {
+           print("print",text)
+            isfilterring = true
+        }else{
+            isfilterring = false
+        }
+        
+        menuCollectionView.reloadData()
+    }
     
-    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        print("Se cancelo la busqueda")
+    }
     
     
 }
