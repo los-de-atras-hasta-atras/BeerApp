@@ -17,7 +17,8 @@ class RoundImage: UIImageView {
         // Drawing code
         
         self.cornerRadius =  self.frame.height / 2
-        layer.masksToBounds = true
+        layer.masksToBounds = false
+        self.clipsToBounds = true
     }
  
 
