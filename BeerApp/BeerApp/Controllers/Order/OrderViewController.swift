@@ -20,6 +20,9 @@ class OrderViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func payOrder(_ sender:Any){
+        self.tabBarController?.selectedIndex = 2
+    }
 
     /*
     // MARK: - Navigation

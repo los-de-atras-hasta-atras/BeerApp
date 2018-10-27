@@ -114,7 +114,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		9B06C2A1217B8D0800CB9AE7 /* Controllers  */ = {
+		9B06C2A1217B8D0800CB9AE7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				B9E236C62184DE6F0082F2E9 /* Payments */,
@@ -123,7 +123,7 @@
 				B9C8F58D2183DFAA0042AD1A /* Home */,
 				9B06C29F217B8D0300CB9AE7 /* SelectionPerfilViewController.swift */,
 			);
-			path = "Controllers ";
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		9B9C7ADB217B8A90006BE18F = {
@@ -154,7 +154,7 @@
 				B9C8F5832183A1C60042AD1A /* Extensions */,
 				B9C8F5822183A0940042AD1A /* Storyboard */,
 				E30001FA2182D8AB00EECFC0 /* Services */,
-				9B06C2A1217B8D0800CB9AE7 /* Controllers  */,
+				9B06C2A1217B8D0800CB9AE7 /* Controllers */,
 				9B9C7AE7217B8A90006BE18F /* AppDelegate.swift */,
 				9B9C7AEB217B8A90006BE18F /* Main.storyboard */,
 				9B9C7AEE217B8A91006BE18F /* Assets.xcassets */,

@@ -13,6 +13,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var menuCollectionView: UICollectionView!
     @IBOutlet weak var searchField:UITextField!
     
+    var selectedBeer: Beer?
+    
     var arrayBeers:[Beer] = []{
         didSet{
             menuCollectionView.reloadData()
@@ -41,15 +43,21 @@ class HomeViewController: UIViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier ==  "detail_segue"{
+            let VC =  segue.destination as! DetailViewController
+            VC.currentBeer = selectedBeer
+        }
+        
     }
-    */
+ 
     
     func loadData(){
         BeerService.sharedInstance.all { [weak self] (beers) in
@@ -76,6 +84,13 @@ extension HomeViewController:UICollectionViewDelegate, UICollectionViewDataSourc
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        if isfilterring{
+            selectedBeer = arrayFiltered[indexPath.row]
+        }else{
+            selectedBeer = arrayBeers[indexPath.row]
+        }
+        
         self.performSegue(withIdentifier: "detail_segue", sender: nil)
     }
 }
@@ -85,7 +100,15 @@ extension HomeViewController: UISearchResultsUpdating, UISearchBarDelegate {
         if let text = searchController.searchBar.text, !text.isEmpty {
            print("print",text)
             isfilterring = true
-            arrayFiltered = arrayBeers.filter({$0.name == text})
+            arrayFiltered = arrayBeers.filter({
+                if $0.name.range(of: text) != nil{
+                    return true
+                }else{
+                    return false
+                }
+                
+            })
+            debugPrint(arrayFiltered)
         }else{
             isfilterring = false
         }

@@ -11,11 +11,15 @@ import NotificationBannerSwift
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var categoryProduct: UITableView!
+    @IBOutlet weak var imageBeere: UIImageView!
+    @IBOutlet weak var descriptionBeer: UILabel!
     var arrayCategory:[String] = ["Prueba"]
+    var currentBeer:Beer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        descriptionBeer.text = currentBeer?.description
         
         // Do any additional setup after loading the view.
     }
