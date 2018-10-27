@@ -15,6 +15,7 @@ class SearchTextfield: UITextField {
     // An empty implementation adversely affects performance during animation.
     override func draw(_ rect: CGRect) {
         // Drawing code
+        print("uhuuuuå")
         self.cornerRadius = 5
         self.shadowRadius = 8
         clipsToBounds = false
