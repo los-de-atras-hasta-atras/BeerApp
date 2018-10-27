@@ -34,22 +34,6 @@
             </objects>
             <point key="canvasLocation" x="-79.200000000000003" y="133.5832083958021"/>
         </scene>
-        <!--Item 2-->
-        <scene sceneID="DgB-w6-2cy">
-            <objects>
-                <viewController id="GtP-gs-N16" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="IBh-dR-8Fs">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="sNr-79-eE0"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="hwB-Ec-sgU"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cv6-qA-Z5P" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1729" y="494"/>
-        </scene>
         <!--Home View Controller-->
         <scene sceneID="0b8-pK-TZo">
             <objects>
@@ -270,7 +254,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="rRn-PG-pqQ" kind="relationship" relationship="viewControllers" id="nUf-qi-P8U"/>
-                        <segue destination="GtP-gs-N16" kind="relationship" relationship="viewControllers" id="50A-dP-m0C"/>
+                        <segue destination="8rb-AD-XGr" kind="relationship" relationship="viewControllers" id="b6j-ip-9uK"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wvp-Uy-68c" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -295,6 +279,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mJj-Op-2aH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1728.8" y="-251.42428785607197"/>
+        </scene>
+        <!--PaymentViewController-->
+        <scene sceneID="teV-Mg-9gG">
+            <objects>
+                <viewControllerPlaceholder storyboardName="card" referencedIdentifier="PaymentViewController" id="8rb-AD-XGr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="os1-tg-zK0"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hEQ-tr-TD1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1607" y="316"/>
         </scene>
     </scenes>
     <resources>
