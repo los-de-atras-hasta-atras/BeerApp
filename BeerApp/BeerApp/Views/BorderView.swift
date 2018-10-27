@@ -16,8 +16,10 @@ class BorderView: UIView {
     override func draw(_ rect: CGRect) {
         // Drawing code
         
-        self.cornerRadius = 8
-        self.shadowRadius = 5
+        self.cornerRadius = self.frame.width/2
+        self.shadowRadius = 8
+        clipsToBounds = false
+        
     }
     
 

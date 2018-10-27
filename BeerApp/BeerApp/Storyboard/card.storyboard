@@ -12,13 +12,14 @@
         <!--Payment View Controller-->
         <scene sceneID="pMi-2r-jvJ">
             <objects>
-                <viewController id="neh-Ie-RS1" customClass="PaymentViewController" customModule="BeerApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PaymentViewController" id="neh-Ie-RS1" customClass="PaymentViewController" customModule="BeerApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Juq-eR-5ua">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ScS-Cl-t0k">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ScS-Cl-t0k">
                                 <rect key="frame" x="137" y="318.5" width="101" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Make Payment"/>
                                 <connections>
                                     <action selector="paymentTapped:" destination="neh-Ie-RS1" eventType="touchUpInside" id="mb7-rx-ulE"/>
@@ -33,10 +34,6 @@
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="ScS-Cl-t0k" firstAttribute="centerY" secondItem="Juq-eR-5ua" secondAttribute="centerY" id="GKl-tN-6dB"/>
-                            <constraint firstItem="ScS-Cl-t0k" firstAttribute="centerX" secondItem="Juq-eR-5ua" secondAttribute="centerX" id="Mck-ab-p0m"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="aa0-D1-teW"/>
                     </view>
                     <connections>

@@ -379,8 +379,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
 				B9F0F9B22183F730005E73B4 /* DetailViewController.swift in Sources */,
+=======
 				9B7A4AE52183EEB300DDBC90 /* PaymentViewController.swift in Sources */,
+>>>>>>> master
 				B9C8F58A2183BB060042AD1A /* RoundImage.swift in Sources */,
 				B9C8F5882183A39F0042AD1A /* BorderView.swift in Sources */,
 				9B9C7AE8217B8A90006BE18F /* AppDelegate.swift in Sources */,
