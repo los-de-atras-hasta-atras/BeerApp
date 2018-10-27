@@ -24,8 +24,7 @@ class PaymentViewController: UIViewController, STPAddCardViewControllerDelegate{
     }
     
     
-    @IBAction func paymentTapped(_ sender: UIButton) {
-        
+    @IBAction func addCardButton(_ sender: UIBarButtonItem) {
         //Setup add card
         let addCardViewController = STPAddCardViewController()
         addCardViewController.delegate = self
@@ -33,7 +32,11 @@ class PaymentViewController: UIViewController, STPAddCardViewControllerDelegate{
         //Present  add card
         let navigationController = UINavigationController(rootViewController: addCardViewController)
         present(navigationController, animated: true)
+    
+        
     }
+    
+    
     
     
     //MARK:  STPAddCardVC
@@ -47,7 +50,7 @@ class PaymentViewController: UIViewController, STPAddCardViewControllerDelegate{
     func addCardViewController(_ addCardViewController: STPAddCardViewController, didCreateToken token: STPToken, completion: @escaping STPErrorBlock) {
         
         dismiss(animated: true)
-        cardMsj.text = "Transaction success!"
+        cardMsj.text = "******\(token.card!.last4)"
         
         
     }
