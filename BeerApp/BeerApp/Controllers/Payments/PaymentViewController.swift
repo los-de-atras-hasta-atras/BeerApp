@@ -13,7 +13,6 @@ class PaymentViewController: UIViewController, STPAddCardViewControllerDelegate{
    
 
     @IBOutlet weak var cardTable: UITableView!
-    @IBOutlet weak var cardMsj: UITextView?
     
     var arrayCard:[String] = []
     
@@ -66,6 +65,16 @@ extension PaymentViewController:UITableViewDelegate,UITableViewDataSource{
         cell.textLabel?.text =  "**** **** **** \(card)"
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            arrayCard.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            
+        }
+
     }
     
     
