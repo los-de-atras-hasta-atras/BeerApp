@@ -11,21 +11,21 @@ import Stripe
 
 class PaymentViewController: UIViewController, STPAddCardViewControllerDelegate{
    
-    
-    @IBOutlet weak var cardMsj: UITextView!
-    
-    
 
+    @IBOutlet weak var cardTable: UITableView!
+    @IBOutlet weak var cardMsj: UITextView?
+    
+    var arrayCard:[String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        cardMsj.text = ""
+//        cardMsj.text = ""
 
         // Do any additional setup after loading the view.
     }
     
     
-    @IBAction func paymentTapped(_ sender: UIButton) {
-        
+    @IBAction func addCardButton(_ sender: UIBarButtonItem) {
         //Setup add card
         let addCardViewController = STPAddCardViewController()
         addCardViewController.delegate = self
@@ -33,8 +33,9 @@ class PaymentViewController: UIViewController, STPAddCardViewControllerDelegate{
         //Present  add card
         let navigationController = UINavigationController(rootViewController: addCardViewController)
         present(navigationController, animated: true)
-    }
     
+        
+    }
     
     //MARK:  STPAddCardVC
     
@@ -47,26 +48,26 @@ class PaymentViewController: UIViewController, STPAddCardViewControllerDelegate{
     func addCardViewController(_ addCardViewController: STPAddCardViewController, didCreateToken token: STPToken, completion: @escaping STPErrorBlock) {
         
         dismiss(animated: true)
-        cardMsj.text = "Transaction success!"
+        arrayCard.append(token.card!.last4)
+//        cardMsj.text = "******\(token.card!.last4)"
+        cardTable.reloadData()
         
+    }
+}
+
+extension PaymentViewController:UITableViewDelegate,UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return arrayCard.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! UITableViewCell
+        let card =  arrayCard[indexPath.row]
+        cell.textLabel?.text =  "**** **** **** \(card)"
         
+        return cell
     }
     
     
     
-    
-    
-    
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
