@@ -13,8 +13,12 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var menuCollectionView: UICollectionView!
     @IBOutlet weak var searchField:UITextField!
     
-    var arrayBeers:[String] = ["Prueba 1","Prueba 1","Prueba 1","Prueba 1"]
-    var arrayFiltered:[String] = []
+    var arrayBeers:[Beer] = []{
+        didSet{
+            menuCollectionView.reloadData()
+        }
+    }
+    var arrayFiltered:[Beer] = []
     var isfilterring = false
     
     let searchController = UISearchController(searchResultsController: nil)
@@ -29,6 +33,7 @@ class HomeViewController: UIViewController {
         navigationItem.titleView = searchController.searchBar
         // Do any additional setup after loading the view.
         searchController.hidesNavigationBarDuringPresentation = false
+        loadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -45,6 +50,12 @@ class HomeViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func loadData(){
+        BeerService.sharedInstance.all { [weak self] (beers) in
+            self!.arrayBeers = beers
+        }
+    }
 
 
 }
@@ -57,8 +68,9 @@ extension HomeViewController:UICollectionViewDelegate, UICollectionViewDataSourc
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! BeerCollectionViewCell
-        let item  = arrayBeers[indexPath.row]
-        cell.beerName.text = item
+        let beer  = arrayBeers[indexPath.row]
+        cell.beerName.text = beer.name
+        
         
         return cell
     }
@@ -73,6 +85,7 @@ extension HomeViewController: UISearchResultsUpdating, UISearchBarDelegate {
         if let text = searchController.searchBar.text, !text.isEmpty {
            print("print",text)
             isfilterring = true
+            arrayFiltered = arrayBeers.filter({$0.name == text})
         }else{
             isfilterring = false
         }
