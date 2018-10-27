@@ -164,9 +164,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SxI-yQ-Dpm">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SxI-yQ-Dpm">
                                 <rect key="frame" x="0.0" y="317" width="375" height="286"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="77" id="f8L-b7-D3t" customClass="CategoryTableViewCell" customModule="BeerApp" customModuleProvider="target">
@@ -176,26 +175,34 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="76.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="300 ml" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OTb-wY-eHx">
-                                                    <rect key="frame" x="15" y="11" width="220" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="300 ml" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OTb-wY-eHx">
+                                                    <rect key="frame" x="15" y="11" width="229" height="23"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$ 200.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N00-UB-FTR">
-                                                    <rect key="frame" x="15" y="38" width="220" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$ 200.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N00-UB-FTR">
+                                                    <rect key="frame" x="15" y="40" width="229" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YYe-ys-3bU">
-                                                    <rect key="frame" x="325" y="22" width="30" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YYe-ys-3bU">
+                                                    <rect key="frame" x="335" y="22" width="25" height="30"/>
                                                     <state key="normal" image="add"/>
                                                 </button>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="N00-UB-FTR" secondAttribute="bottom" constant="5" id="0iE-an-pMz"/>
+                                                <constraint firstItem="YYe-ys-3bU" firstAttribute="trailing" secondItem="3xt-mL-YqT" secondAttribute="trailingMargin" id="4XR-8p-fko"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="YYe-ys-3bU" secondAttribute="bottom" constant="14" id="L1k-Y4-R1v"/>
+                                                <constraint firstItem="OTb-wY-eHx" firstAttribute="top" secondItem="3xt-mL-YqT" secondAttribute="topMargin" id="Qjd-tf-CON"/>
+                                                <constraint firstItem="OTb-wY-eHx" firstAttribute="leading" secondItem="3xt-mL-YqT" secondAttribute="leadingMargin" id="Wem-gO-arn"/>
+                                                <constraint firstItem="N00-UB-FTR" firstAttribute="top" secondItem="OTb-wY-eHx" secondAttribute="bottom" constant="6" id="aDb-HG-br1"/>
+                                                <constraint firstItem="N00-UB-FTR" firstAttribute="leading" secondItem="3xt-mL-YqT" secondAttribute="leadingMargin" id="f5O-AG-I3W"/>
+                                                <constraint firstItem="N00-UB-FTR" firstAttribute="top" secondItem="OTb-wY-eHx" secondAttribute="bottom" constant="6" id="iZL-s5-azh"/>
+                                                <constraint firstItem="YYe-ys-3bU" firstAttribute="top" secondItem="3xt-mL-YqT" secondAttribute="topMargin" constant="11" id="pcM-TR-leS"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="addButton" destination="YYe-ys-3bU" id="bIm-KB-4Pz"/>
@@ -214,7 +221,12 @@
                         <constraints>
                             <constraint firstItem="yTu-jI-8L3" firstAttribute="leading" secondItem="pI4-4w-rxi" secondAttribute="leading" constant="16" id="5YF-Nh-OKc"/>
                             <constraint firstItem="pI4-4w-rxi" firstAttribute="trailing" secondItem="vuU-it-PaH" secondAttribute="trailing" constant="109" id="7HR-Xg-kr0"/>
+                            <constraint firstAttribute="bottom" secondItem="SxI-yQ-Dpm" secondAttribute="bottom" id="C2G-j8-aBk"/>
+                            <constraint firstItem="SxI-yQ-Dpm" firstAttribute="top" secondItem="yTu-jI-8L3" secondAttribute="bottom" constant="46" id="IfO-3I-TEK"/>
+                            <constraint firstAttribute="bottom" secondItem="SxI-yQ-Dpm" secondAttribute="bottom" id="K7c-uY-UdK"/>
+                            <constraint firstItem="SxI-yQ-Dpm" firstAttribute="trailing" secondItem="pI4-4w-rxi" secondAttribute="trailing" id="L0K-E8-Ej0"/>
                             <constraint firstItem="yTu-jI-8L3" firstAttribute="top" secondItem="vuU-it-PaH" secondAttribute="bottom" constant="13" id="Nwq-sw-ZGg"/>
+                            <constraint firstItem="SxI-yQ-Dpm" firstAttribute="leading" secondItem="pI4-4w-rxi" secondAttribute="leading" id="X9o-fE-Vfp"/>
                             <constraint firstItem="vuU-it-PaH" firstAttribute="leading" secondItem="pI4-4w-rxi" secondAttribute="leading" constant="109" id="ci5-V8-DR1"/>
                             <constraint firstItem="pI4-4w-rxi" firstAttribute="trailing" secondItem="yTu-jI-8L3" secondAttribute="trailing" constant="16" id="hc3-Fa-hOI"/>
                             <constraint firstItem="vuU-it-PaH" firstAttribute="top" secondItem="pI4-4w-rxi" secondAttribute="top" constant="20" id="rWp-DG-Pfm"/>
@@ -224,6 +236,8 @@
                     <navigationItem key="navigationItem" title="Detalle" largeTitleDisplayMode="never" id="Zsf-Zt-ERI"/>
                     <connections>
                         <outlet property="categoryProduct" destination="SxI-yQ-Dpm" id="UAd-T7-Pyp"/>
+                        <outlet property="descriptionBeer" destination="yTu-jI-8L3" id="exc-hN-EUM"/>
+                        <outlet property="imageBeere" destination="vuU-it-PaH" id="gSh-4X-dac"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZHy-pM-X54" userLabel="First Responder" sceneMemberID="firstResponder"/>
