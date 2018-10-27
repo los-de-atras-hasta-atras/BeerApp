@@ -24,6 +24,7 @@
 		B9C8F58F2183DFC20042AD1A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C8F58E2183DFC20042AD1A /* HomeViewController.swift */; };
 		B9E236BF2184D5F90082F2E9 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E236BE2184D5F90082F2E9 /* OrderViewController.swift */; };
 		B9E236C12184D6A90082F2E9 /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E236C02184D6A90082F2E9 /* OrderTableViewCell.swift */; };
+		B9E236C82184E3C80082F2E9 /* BeerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E236C72184E3C80082F2E9 /* BeerService.swift */; };
 		B9F0F9AF2183E60E005E73B4 /* BeerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F0F9AE2183E60E005E73B4 /* BeerCollectionViewCell.swift */; };
 		B9F0F9B22183F730005E73B4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F0F9B12183F730005E73B4 /* DetailViewController.swift */; };
 		E30001FC2182D8CD00EECFC0 /* RESTClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30001FB2182D8CD00EECFC0 /* RESTClient.swift */; };
@@ -72,6 +73,7 @@
 		B9E236BE2184D5F90082F2E9 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		B9E236C02184D6A90082F2E9 /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
 		B9E236C22184D7D10082F2E9 /* Order.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Order.storyboard; path = "/Users/angelricardosolsonanevero/Library/Mobile Documents/com~apple~CloudDocs/Diplomado/BeerApp/BeerApp/BeerApp/Storyboard/Order.storyboard"; sourceTree = "<absolute>"; };
+		B9E236C72184E3C80082F2E9 /* BeerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerService.swift; sourceTree = "<group>"; };
 		B9F0F9AE2183E60E005E73B4 /* BeerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCollectionViewCell.swift; sourceTree = "<group>"; };
 		B9F0F9B12183F730005E73B4 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		CDA446A956A578133FD56516 /* Pods_BeerAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeerAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -238,6 +240,7 @@
 			children = (
 				E30001FB2182D8CD00EECFC0 /* RESTClient.swift */,
 				E30001FD2182D9E800EECFC0 /* OpenTabService.swift */,
+				B9E236C72184E3C80082F2E9 /* BeerService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 				E30001FE2182D9E800EECFC0 /* OpenTabService.swift in Sources */,
 				E39C6A9A2184BDD4007F3FE4 /* Beer.swift in Sources */,
 				E39C6A9C2184BFF9007F3FE4 /* Inventory.swift in Sources */,
+				B9E236C82184E3C80082F2E9 /* BeerService.swift in Sources */,
 				E30001FC2182D8CD00EECFC0 /* RESTClient.swift in Sources */,
 				9B06C2A0217B8D0300CB9AE7 /* SelectionPerfilViewController.swift in Sources */,
 				B9F0F9AF2183E60E005E73B4 /* BeerCollectionViewCell.swift in Sources */,
